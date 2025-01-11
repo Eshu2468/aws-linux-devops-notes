@@ -1,0 +1,137 @@
+Interview questions and Answers
+
+Question 1
+Can you tell us the fundamental differences between DevOps & Agile?
+
+Although DevOps shares some similarities with the Agile methodology, which is one of the most popular SDLC methodologies, both are fundamentally different approaches to software development. Following are the various fundamental differences between the two:
+Agile Approach – The agile approach is only meant for development in Agile while the DevOps approach is meant for both development and operations in DevOps.
+Practices and Processes – While agile involves practices such as Agile Scrum and Agile Kanban, DevOps involves processes such as CD (Continuous Delivery), CI (Continuous Integration), and CT (Continuous Testing).
+Priority – Agile prioritizes timeliness whereas, DevOps gives equal priority to timeliness and quality.
+Release Cycles – DevOps offers smaller release cycles with immediate feedback while Agile offers only smaller release cycles without immediate feedback.
+Feedback Source – Agile relies on feedback from customers while feedback from self (monitoring tools) is involved in DevOps.
+Scope of Work – For Agile, the scope of work is agility only but for DevOps, it is agility and the need for automation.
+
+Question 2
+Why do we need DevOps?
+
+Organizations these days are trying to transport small features to customers via a series of release trains instead of releasing big feature sets. There are several benefits of doing so, including better software quality and quick customer feedback.
+All such benefits lead to a higher level of customer satisfaction, which is the most important goal for any product development project. To do so, companies need to:
+Increase deployment frequency
+Lessen lead time between fixes
+Lower failure rate of new releases
+In case of new release crashing, have a faster mean time to recovery
+DevOps helps in fulfilling all these requirements and thus, achieving seamless software delivery. Full-fledged organizations like Amazon, Etsy, and Google have adopted DevOps methodology resulting in achieving performance levels that were previously uncharted.
+With the adoption of DevOps methodology, organizations are able to accomplish tens to thousands of deployments in a single day. Moreover, doing so while offering first-rate reliability, security, and stability.
+
+Question 3
+What are the important business and technical benefits of using DevOps?
+DevOps brings a lot of business and technical benefits to the table. Some of the most important ones are listed down as follows:
+Business benefits:
+Enhanced operating environment stability
+Faster delivery of features
+More time for adding value to the product
+Technical benefits:
+Continuous software delivery
+Faster problem resolution
+Lesser complex problems
+
+Question 4
+Can you name some of the most-used DevOps tools?
+Following is a list of some of the most widely used DevOps tools:
+Ansible – A configuration management and application deployment tool
+Chef – A configuration management and application deployment tool
+Docker – A containerization tool
+Git – A version control system (VCS/SCV) tool
+Jenkins – A continuous integration (CI) tool
+Jira – An agile team collaboration tool
+Nagios – A continuous monitoring tool
+Puppet – A configuration management and application deployment tool
+Selenium – A continuous testing (CT) tool
+
+Question 5
+What do you understand by a Version Control System (VCS)? Define its uses.
+A Version Control System or VCS is a system that is capable of recording changes made to a file or a group of files over time. Git and Mercurial are two of the most popular version control systems. Important uses of a VCS are:
+Check what was the last modification that caused a problem
+Compare the changes made over time
+Identifying who introduced a new issue and at what time
+Revert a file or files to some earlier state
+Revert the complete project to a previous state
+
+Question 6
+Git is a popular DevOps tool. Tell us how you will revert a commit that has already been pushed and made public.
+There are two ways of doing so:
+By creating a new commit to undo all changes made by the commit that has already been pushed and made public. Following command is used for doing so:
+git revert
+By fixing or removing the bad file in a new commit and then pushing it to the remote repository. After making necessary changes to the file, commit it to the remote repository using the command:   git commit -m “commit message”
+
+Question 7
+In your opinion, what are the major benefits of implementing DevOps automation?
+Following are the major benefits of implementing DevOps automation:
+Removal of the possibility of human error from the CD equation (Core benefit)
+As tasks become more predictable and repeatable, it is easy to identify and correct when something goes wrong. Hence, it results in producing more reliable and robust systems
+Removes bottlenecks from the CI pipeline. It results in increased deployment frequency and decreased number of failed deployments. Both of them are important DevOps KPIs
+
+Question 8
+What do you understand by containers?
+Containers are a form of lightweight virtualization that help in providing isolation among processes. Containers are heavier than a chroot but lighter than a hypervisor.
+
+Question 9
+Microservices are a core part of DevOps. Can you name any two popular Java development frameworks for creating microservices?
+There are several Java frameworks that allow creating microservices. However, Eclipse MicroProfile and Spring Boot stand out from the herd as the two leading Java development frameworks used in DevOps for creating microservices.
+
+Question 10
+What is docker used for?
+Docker is a popular open-source platform designed to make it easier to develop, deploy, and run applications using containers. Containers allow developers to package an application and its dependencies into a standardized unit, ensuring it runs consistently across different computing environments. Docker is a tool that allows the creation, deletion, running and storing containers.
+Common Use Cases for Docker:
+Application Development: Creating isolated environments for each app.
+DevOps: Automating deployment pipelines and managing infrastructure as code.
+Data Analytics: Running tools like Jupyter Notebooks, TensorFlow, or Spark in containers.
+Cloud Applications: Deploying scalable applications in hybrid or cloud-native environments
+
+Question 11
+How to show all containers on your system using docker?
+docker ps -a
+Explanation:
+docker ps: Shows only the running containers by default.
+-a (or --all): Includes all containers, whether they are running, stopped, or exited.
+
+Question 12
+What is Kubernetes?
+Kubernetes is an open-source container management tool that holds the responsibilities of container deployment, scaling & descaling of containers & load balancing. Being Google’s brainchild, it offers excellent community and works brilliantly with all the cloud providers. So, we can say that Kubernetes is not a containerization platform, but it is a multi-container management solution.
+
+Question 13
+How is Kubernetes related to Docker?
+It’s a known fact that Docker provides the lifecycle management of containers and a Docker image builds the runtime containers. But, since these individual containers have to communicate, Kubernetes is used. So, Docker builds the containers and these containers communicate with each other via Kubernetes. So, containers running on multiple hosts can be manually linked and orchestrated using Kubernetes.
+
+Question 14
+What is Container Orchestration?
+Consider a scenario where you have 5-6 microservices for an application. Now, these microservices are put in individual containers, but won’t be able to communicate without container orchestration. So, as orchestration means the amalgamation of all instruments playing together in harmony in music, similarly container orchestration means all the services in individual containers working together to fulfill the needs of a single server.
+
+Question 15
+What do you know about clusters in Kubernetes?
+The fundamental behind Kubernetes is that we can enforce the desired state management, by which I mean that we can feed the cluster services of a specific configuration, and it will be up to the cluster services to go out and run that configuration in the infrastructure. So, as you can see in the above diagram, the deployment file will have all the configurations required to be fed into the cluster services. Now, the deployment file will be fed to the API and then it will be up to the cluster services to figure out how to schedule these pods in the environment and make sure that the right number of pods are running.
+So, the API which sits in front of services, the worker nodes & the Kubelet process that the nodes run, all together make up the Kubernetes Cluster.
+
+Question 16
+What is the role of Load Balance in Kubernetes?
+Load balancing is a way to distribute the incoming traffic into multiple backend servers, which is useful to ensure the application available to the users. In Kubernetes, as shown in the above figure all the incoming traffic lands to a single IP address on the load balancer which is a way to expose your service to outside the internet which routes the incoming traffic to a particular pod (via service) using an algorithm known as round-robin. Even if any pod goes down load balances are notified so that the traffic is not routed to that particular unavailable node. Thus load balancers in Kubernetes are responsible for distributing a set of tasks (incoming traffic) to the pods
+
+Question 17
+How to monitor the Kubernetes cluster?
+Prometheus is used for Kubernetes monitoring. The Prometheus ecosystem consists of multiple components. Mainly Prometheus server which scrapes and stores time-series data. Client libraries for instrumenting application code. Push gateway for supporting short-lived jobs. Special-purpose exporters for services like StatsD, HAProxy, Graphite, etc. An alert manager to handle alerts on various support tools
+
+Question 18
+Can you explain the differences between Docker Swarm and Kubernetes?
+The main difference between Kubernetes and Docker Swarm:
+The installation procedure of the K8s is very complicated but if it is once installed then the cluster is robust. On the other hand, the Docker swarm installation process is very simple but the cluster is not at all robust. Kubernetes can process the auto-scaling but the Docker swarm cannot process the auto-scaling of the pods based on incoming load. Kubernetes is a full-fledged Framework. Since it maintains the cluster states more consistently so autoscaling is not as fast as Docker Swarm.
+
+Question 19
+How many types of repositories available in Git? 
+There are two types of repositories available in Git Bare Repositories (Central) 
+These repositories are only for Storing & Sharing the code All central repositories are 
+- bare repositories
+- Non – Bare Repositories (Local) In these repositories, we can modify the files All local /user repositories are Bare Repositories
+
+Question 20
+What is Git cherry-pick? 
+When you go with git merge, all commits which are there in new development branch will be merged into current branch where you are. But sometimes, requirement will be in such that you would want to get only one commit form development branch instead of merging all commits. In this case we go with git cherry-pick. Git cherry-pick will pick only one commit whatever you select and merges with commits which are there in your current branch. So picking particular commit and merging into your current branch we call git cherry-pick.
